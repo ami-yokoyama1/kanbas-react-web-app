@@ -1,0 +1,155 @@
+<html>
+    <head></head>
+    <body>
+        <a href="index.html">Course Details </a> &nbsp;
+        <a href="#">Sections</a> &nbsp;
+        <a href="#">Navigation</a> &nbsp;
+        <a href="#">Apps</a> &nbsp;
+        <a href="#">Feature</a> &nbsp;
+        <a href="#">Options</a> &nbsp;
+        <a href="#">Integrations</a> &nbsp;
+        <h2>Course Details</h2>
+
+        <label><strong>Image: </strong></label><br/>
+        <button>Choose Image</button><br/>
+        <h2></h2>
+
+        <label><strong>Name: </strong></label><br/>
+        <label>CS4550 12631 Web Development SEC 01 Fall 2023 [BOS-1-TR]</label></br>
+        <h2></h2>
+
+        <label><strong>Blueprint Course: </strong></label><br/>
+        <label>No</label></br>
+        <h2></h2>
+
+        <label><Strong>Course Template: </Strong></label><br/>
+        <input type="checkbox" value="template"
+            name = "check-template" id="chkbox-template" disabled/>
+        <label for="chkbox-template">Enable course as a Course Template</label><br/>
+        <h2></h2>
+
+        <label><Strong>Time Zone: </Strong></label><br/>
+        <select>
+            <option selected value="ET">Eastern Time (US & CANADA) (-05:00/-04:00)</option>
+        </select></br>
+        <h2></h2>
+
+        <label><Strong>SIS ID: </Strong></label><br/>
+        <label>CS4550.12631.202410</label></br>
+        <h2></h2>
+
+        <label><Strong>Subaccount: </Strong></label><br/>
+        <label style="color:brown">CS Undergrad</label></br>
+        <h2></h2>
+
+        <label><Strong>Term: </Strong></label><br/>
+        <label>202410_1 Fall 2023 Semester Full Term</label></br>
+        <h2></h2>
+
+        <label><Strong>Participation: </Strong></label></br>
+        <!-- make the box longer, and the word term bold -->
+        <select>
+            <option selected value="term">Term</option>
+        </select></br>
+
+
+        <label>Course participation is limited to <Strong>term</Strong> start and end dates.</label>
+        <h2></h2>
+
+        <label for="text-fields-start">Start</label><br/>
+        <input type="date" 
+            id="text-fields-start" 
+            value="2021-01-01"/><br/>
+        <h2></h2>
+        
+        <label for="text-fields-end">End</label><br/>
+        <input type="date" 
+            id="text-fields-end" 
+            value="2021-01-01"/><br/>
+        <h2></h2>
+
+        <input type="checkbox" value="restrict-before"
+            name = "check-restrict" id="chkbox-restrict-before"/>
+        <label for="chkbox-restrict-before">Restrict students from viewing course before term start date</label><br/>
+        <input type="checkbox" value="restrict-after"
+            name = "check-restrict" id="chkbox-restrict-after"/>
+        <label for="chkbox-restrict-after">Restrict students from viewing course after term end date</label><br/>
+        <h2></h2>
+
+        <label><Strong>Default due time: </Strong></label><br/>
+        <select>
+            <option selected value="default">Account default (11:59pm)</option>
+        </select></br>
+        <label>This influeces the user interface for setting due dates. It does not change the time due for 
+            any existing assignments.
+        </label></br>
+        <h2></h2>
+
+        <label><Strong>Language: </Strong></label><br/>
+        <select>
+            <option selected value="default">Not set (user-configurable, defaults to English)</option>
+        </select></br>
+        <label>This will override any user/system language preferences. This is only recommended for foreign language courses
+        </label></br>
+        <h2></h2>
+
+        <label><strong>File Storage: </strong></label><br/>
+        <label>10000 megabytes</label>
+        <h2></h2>
+
+        <label><Strong>Large Course: </Strong></label><br/>
+        <input type="checkbox" value="launch"
+            name = "check-launch" id="chkbox-launch"/>
+        <label for="chkbox-launch">Launch SpeedGrader Filtered by Student Group</label><br/>
+        <h2></h2>
+
+        <label><Strong>Grading Scheme: </Strong></label><br/>
+        <input type="checkbox" value="scheme"
+            name = "check-scheme" id="chkbox-scheme"/>
+        <label for="chkbox-scheme">Enable course rading scheme</label><br/>
+        <h2></h2>
+
+        <label><Strong>License: </Strong></label><br/>
+        <select>
+            <option selected value="default">Private (Copyrighted)</option>
+        </select></br>
+        <h2></h2>
+
+        <label><Strong>File Copyright: </Strong></label><br/>
+        <input type="checkbox" value="copyright"
+            name = "check-copyright" id="chkbox-copyright"/>
+        <label for="chkbox-copyright">Copyright and license information must be provided for files before they are published.</label><br/>
+        <h2></h2>
+
+        <label><Strong>Visibility: </Strong></label><br/>
+        <label>If you need to make your course public please contact your administrator/support.</label></br>
+        <select disabled>
+            <option selected value="default">Course</option>
+        </select></br>
+        <input type="checkbox" value="pci"
+        name = "check-pci" id="chkbox-pci" disabled/>
+        <label for="chkbox-pci">Include this course in the public course index</label><br/>
+        <h2></h2>
+
+        <label><Strong>Format: </Strong></label><br/>
+        <select>
+            <option selected value="default">On-Campus</option>
+        </select></br>
+        <h2></h2>
+
+        <label><Strong>Mastery Paths: </Strong></label><br/>
+        <input type="checkbox" value="paths"
+            name = "check-paths" id="chkbox-paths"/>
+        <label for="chkbox-paths">Enable individual learning paths for students based on assessment</label><br/>
+        <h2></h2>
+
+        <label><Strong>Description: </Strong></label><br/>
+        <form id="textarea">
+            <textarea cols="45" rows="10"></textarea>
+        </form>
+        <a href="#">More options</a>
+        <h2></h2>
+
+        <button>Update Course Details</button><br/>
+    </body>
+</html>
