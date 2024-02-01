@@ -1,5 +1,7 @@
 <html>
-    <head></head>
+    <head>
+        <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css"/>
+    </head>
         <body>
             <table>
                 <tbody>
@@ -50,48 +52,49 @@
     
                         <!-- Third Column -->
                         <td style="width:80%">
-                            <head>
+                            <!-- <head>
                                 <style>
                                     button{
                                         vertical-align:middle;
                                     }
                         
                                 </style>
-                            </head>
-                            <body>
+                            </head> -->
+                  
                                 <select id="speedGrader">
                                     <option selected value="speedGrader">SpeedGrader</option>
                                 </select>
                                 <h3>Assignment Name</h3>
                                 <form id="text-field-assignment-name">
-                                    <input id="text-field-assignment-name" 
+                                    <input class ="form-control" 
+                                    id="text-field-assignment-name" 
                                     value="A1 - ENV + HTML"/><br/>
                                 </form>
                                 <form id="textarea">
-                                    <textarea cols="30" rows="5"></textarea>
+                                    <textarea class = "form-control" cols="30" rows="5"></textarea>
                                 </form>
                                 <label>Points</label>
                                 <form id="text-field-points">
-                                    <input id="text-field-points" 
+                                    <input class = "form-control" id="text-field-points" 
                                     value="100"/><br/>
                                 </form>
                         
                                 <label for="assignment-group">Assignment Group</label><br/>
-                                <select id="assignment-group">
+                                <select class = "form-control" id="assignment-group">
                                     <option selected value="ASSIGNMENTS">ASSIGNMENTS</option>
                                 </select>
                         
                                 <h2></h2>
                         
                                 <label for="grade-format">Display Grade as</label><br/>
-                                <select id="grade-format">
+                                <select class = "form-control" id="grade-format">
                                     <option selected value="percentage">Percentage</option>
                                 </select>
                         
                                 <h2></h2>
                         
                                 <label for="submission-type">Submission Type</label><br/>
-                                <select id="submission-type">
+                                <select class = "form-control" id="submission-type">
                                     <option selected value="online">Online</option>
                                 </select>
                         
@@ -125,39 +128,39 @@
                                 <br/>
                                 <label>Assign to</label>
                                 <form id="text-field-assign-to">
-                                    <input id="text-field-assign-to" 
+                                    <input class = "form-control" id="text-field-assign-to" 
                                     value="Everyone"/><br/>
                                 </form>
                         
                                 <h2></h2>
                         
                                 <label for="text-fields-due">Due</label><br/>
-                                <input type="date" 
+                                <input class = "form-control" type="date" 
                                     id="text-fields-due" 
                                     value="2000-01-01"/><br/>
                         
                                 <h2></h2>
                                 
                                 <label for="text-fields-available-from">Available from</label><br/>
-                                <input type="date" 
+                                <input class = "form-control" type="date" 
                                     id="text-fields-available-from" 
                                     value="2021-01-01"/><br/>
                         
                                 <h2></h2>
                         
                                 <label for="text-fields-until">Until</label><br/>
-                                <input type="date" 
+                                <input class = "form-control" type="date" 
                                     id="text-fields-until" 
                                     value="2021-01-01"/><br/>
                         
                                 <h2></h2>
                         
                                 <a href="../screen.html">
-                                    <button type="button cancel" id="button">Cancel</button>
-                                    <button type="button Save" id="button">Save</button>
+                                    <button class="btn btn-danger" type="button cancel" id="button">Cancel</button>
+                                    <button class="btn btn-success" type="button Save" id="button">Save</button>
                                 </a>
 
-                            </body>
+                         
                         </td>
                     </tr>
                 </tbody>
