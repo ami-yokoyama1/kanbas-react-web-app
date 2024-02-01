@@ -11,19 +11,31 @@
     font-size: 0.8em;  
     text-align: center;
 }
+
+/* icon background for selected */
 .wd-kanbas-navigation li.wd-active {
     background-color: white;
 }
+
+/* selected title font color */
 .wd-kanbas-navigation li.wd-active a {
     color: red;
 }
+
+/* unselected title font color */
 .wd-kanbas-navigation a {
     color: white;
     text-decoration: none;
 }
+
+/* font for unselected symbols*/
 .wd-kanbas-navigation a i {
     color: red;
     font-size: 2em;
     margin-bottom: 5px;
+}
+
+.wd-kanbas-navigation li.wd-acct{
+    color: blueviolet;
 }
   
