@@ -39,3 +39,12 @@
   padding-left: 0.5em;
   padding-right: 0.5em;
 }
+
+.buttons {
+  padding-left: 30em;
+}
+
+.buttons button.module{
+  background-color: red;
+  color: white;
+}
