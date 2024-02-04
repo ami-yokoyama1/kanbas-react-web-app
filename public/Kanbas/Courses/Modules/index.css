@@ -40,11 +40,23 @@
   padding-right: 0.5em;
 }
 
-.buttons {
+.buttons{
   padding-left: 30em;
 }
 
 .buttons button.module{
   background-color: red;
   color: white;
+}
+
+.cs-options a{
+  display: block;
+  height: 50px;
+  width: 230px;
+  margin-right: 5 px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  border: 1px solid gray !important;
 }
