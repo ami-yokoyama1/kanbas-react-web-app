@@ -24,7 +24,13 @@
 .wd-modules > li > ul > li {
   padding: 5px;
   border-top: 1px solid gray !important;
+  /* border-bottom: 1px solid gray; */
   border-left: 2px solid green;
+}
+
+.wd-modules > li > ul > li > ul > li {
+  /* padding: 5px; */
+  border-top: 1px solid gray !important;
 }
 
 .wd-modules > li {
