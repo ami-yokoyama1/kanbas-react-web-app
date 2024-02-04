@@ -24,16 +24,18 @@
 .wd-modules > li > ul > li {
   padding: 5px;
   border-top: 1px solid gray !important;
-  /* border-bottom: 1px solid gray; */
   border-left: 2px solid green;
-}
-
-.wd-modules > li > ul > li > ul > li {
-  /* padding: 5px; */
-  border-top: 1px solid gray !important;
 }
 
 .wd-modules > li {
   margin-bottom: 20px;
 }
 
+.wd-modules span.wd-list-under-weeks{
+  padding-left: 2em;
+}
+
+.wd-modules i.fa-link{
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
