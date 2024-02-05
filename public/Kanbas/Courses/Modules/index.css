@@ -41,12 +41,16 @@
 }
 
 .buttons{
-  padding-left: 30em;
+  padding-left: 27em;
 }
 
 .buttons button.module{
   background-color: red;
   color: white;
+}
+
+.flex-grow-0{
+  margin-left: 2%;
 }
 
 .cs-options a{
@@ -55,8 +59,23 @@
   width: 230px;
   margin-right: 5 px;
   background-color: #ccc;
-  text-align: center;
+  text-align: left;
   line-height: 50px;
   text-decoration: none;
   border: 1px solid gray !important;
 }
+
+.td a, .cu-le a, .cu-23le a{
+  color: red;
+  text-decoration: none;
+}
+
+.top-bar a i{
+  padding: 5px;
+}
+
+.top-bar a, .top-bar button, .collapse{
+  color: red;
+  text-decoration: none;
+}
+
