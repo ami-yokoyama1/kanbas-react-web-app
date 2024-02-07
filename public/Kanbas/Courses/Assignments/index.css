@@ -50,6 +50,11 @@
     padding-bottom: 10px;
 }
 
+.col-9 a{
+  text-decoration: none;
+  color:black;
+}
+
 .wd-rounded-corners-all-around{
     border-radius: 30px;
     border-width: 1px;
@@ -57,3 +62,17 @@
     border-style: solid;
     padding: 1px;
 }
+
+.parent{
+  overflow:hidden;
+  padding-bottom: 10px;
+}
+
+.parent button.assignment{
+  background-color: red;
+  color: white;
+}
+
+/* .top-bar{
+  overflow: hidden;
+} */
