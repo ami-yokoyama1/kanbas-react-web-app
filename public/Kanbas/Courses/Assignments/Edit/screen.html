@@ -106,46 +106,88 @@
               </ul>
             </div>
             <div class="flex-fill">
-              <div class="pub">
-                <span class="float-end">
-                  <i class="fa fa-check-circle text-success"></i>
-                  Published
-                  <button type="..."><i class="fa fa-ellipsis-v ms-2"></i></button>
-                </span>
-              </div>
-              <hr/>
+                    <div class="pub">
+                      <span class="float-end">
+                        <i class="fa fa-check-circle text-success"></i>
+                        Published
+                        <button type="..."><i class="fa fa-ellipsis-v ms-2"></i></button>
+                      </span>
+                    </div>
+                    <hr/>
 
-              <div class="mb-3">
-                <label for="a1" class="form-label">Assignment Name</label>
-                <input type="assignment-name" class="form-control" id="a1"
-                       value="A1 - ENV + HTML">
-              </div>
+                    <div class="mb-3">
+                      <label for="a1" class="form-label">Assignment Name</label>
+                      <input type="assignment-name" class="form-control" id="a1"
+                            value="A1 - ENV + HTML">
+                    </div>
 
-              <div class="mb-3">
-                <textarea class="form-control" rows="4">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semseter. We will add new content eveyr week, pushing the code to a GitHub source respository, and then deploying the content to a remote server hosted on Netlify.
-                </textarea>
-              </div>
+                    <div class="mb-3">
+                      <textarea class="form-control" rows="4">This assignment describes how to install the development environment for creating and working with Web applications we will be developing this semseter. We will add new content eveyr week, pushing the code to a GitHub source respository, and then deploying the content to a remote server hosted on Netlify.
+                      </textarea>
+                    </div>
 
-              <div class="w-25">
-                Points
-                <input type="assignment-name" class="form-control"
-                       value="100">
+                  <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-3 assignments">
+                            Points
+                        </div>
+                        <div class="col-7 point-box">
+                          <input type="assignment-name" class="form-control w-100"
+                            value="100">
+                        </div>
+                        <div class="clearfix"></div>    
+                    </div>
+                  </div>
+
+                  <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-3 assignments">
+                            Assignment Group
+                        </div>
+                        <div class="col-7">
+                          <select class="form-select">
+                            <option selected>ASSIGNMENTS</option>
+                          </select>
+                        </div>
+                        <div class="clearfix"></div>    
+                  </div>
+                </div>
+
+                <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-3 assignments">
+                          Display Grade as
+                      </div>
+                      <div class="col-7">
+                        <select class="form-select">
+                          <option selected>Percentage</option>
+                        </select>
+                      </div>
+                      <div class="clearfix"></div>    
+                </div>
               </div>
 
               <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
-                        Points
-                    </div>
-                    <div class="col">
-                      <input type="assignment-name" class="form-control"
-                       value="100">
-                    </div>
-                    <div class="clearfix"></div>
-            
+                  <div class="col-3"></div>
+                  <div class="col-7">
+                    <input class="form-check-input"
+                    type="checkbox" id="nocount"/>
+                    <label class="form-check-label1" for="nocount">
+                      Do not count this assignment towards the final grade
+                    </label>
+                  </div>
+                </div>
               </div>
 
-            </div>
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-3 assignments">Assign</div>
+                  <div class="col-7">
+                    
+                  </div>
+                </div>
+              </div>
 
             </div>
             <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
