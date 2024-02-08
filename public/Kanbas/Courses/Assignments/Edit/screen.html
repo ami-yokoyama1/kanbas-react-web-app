@@ -209,183 +209,40 @@
                       <a href="#">
                         <button class="button-add w-100">+ Add</button>
                       </a>
-      
-                      
                   </div>
                 </div>
               </div>
 
+            <hr/>
+
+
+              <div class="row">
+                <div class="col-7">
+                  <input class="form-check-input"
+                    type="checkbox" id="notify"/>
+                    <label class="form-check-label1" for="notify">
+                      Notify users that this content has changed
+                    </label>
+                </div>
+                <div class="col-3">
+                  <div class="row">
+                    <div class="col-5">
+                      <a href="../screen.html">
+                        <button type="button cancel" id="button">Cancel</button></a>
+                    </div>
+                    <div class="col-5">
+                      <a href="../screen.html">
+                        <button class="btn btn-success" type="button save" id="button">Save</button></a>
+                    </div>
+                  </div>
+                </div>
+              </div><hr/>
+
             </div>
-            <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px">
+            <!-- <div class="flex-grow-0 me-2 d-none d-lg-block" style="width: 250px"> -->
               
                 <!-- Implement Course Status here -->
-            </div>
+            <!-- </div> -->
           </div>
-
-
-            <!-- from last week below: -->
-
-            <table>
-                <tbody>
-                    <tr valign="top">
-                        <!-- First column -->
-                        <td>
-                            <ul>
-                                <li>
-                                    <a href="../../../Account/Profile/screen.html">
-                                    Account</a></li>
-                                <li>
-                                    <a href="#">Dashboard</a>
-                                </li>
-                                <li>
-                                    <a href="../../Home/screen.html">Courses</a>
-                                </li>
-                                <li><a href="#">Calendar</a></li>
-                                <li><a href="#">Inbox</a></li>
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">Studio</a></li>
-                                <li><a href="#">Commons</a></li>
-                                <li><a href="#">Help</a></li>
-                            </ul>
-                        </td>
-    
-                        <!-- Second Column -->
-                        <td style="width:25%">
-                            <ul>
-                                <li><a href="../../Home/screen.html">Home</a></li>
-                                <li><a href="#">Modules</a></li>
-                                <li><a href="#">Piazza</a></li>
-                                <li><a href="#">Zoom Meetings</a></li>
-                                <li><a href="../screen.html">Assignments</a></li>
-                                <li><a href="#">Quizzes</a></li>
-                                <li><a href="../../Grades/screen.html">Grades</a></li>
-                                <li><a href="#">People</a></li>
-                                <li><a href="#">Panopto Video</a></li>
-                                <li><a href="#">Discussions</a></li>
-                                <li><a href="#">Pages</a></li>
-                                <li><a href="#">Files</a></li>
-                                <li><a href="#">Rubrics</a></li>
-                                <li><a href="#">Outcomes</a></li>
-                                <li><a href="#">Collaborations</a></li>
-                                <li><a href="#">Syllabus</a></li>
-                                <li><a href="../../Settings/CourseDetails/screen.html">Settings</a></li>
-                            </ul>
-                        </td>
-    
-                        <!-- Third Column -->
-                        <td style="width:80%">
-                            <!-- <head>
-                                <style>
-                                    button{
-                                        vertical-align:middle;
-                                    }
-                        
-                                </style>
-                            </head> -->
-                  
-                                <select id="speedGrader">
-                                    <option selected value="speedGrader">SpeedGrader</option>
-                                </select>
-                                <h3>Assignment Name</h3>
-                                <form id="text-field-assignment-name">
-                                    <input class ="form-control" 
-                                    id="text-field-assignment-name" 
-                                    value="A1 - ENV + HTML"/><br/>
-                                </form>
-                                <form id="textarea">
-                                    <textarea class = "form-control" cols="30" rows="5"></textarea>
-                                </form>
-                                <label>Points</label>
-                                <form id="text-field-points">
-                                    <input class = "form-control" id="text-field-points" 
-                                    value="100"/><br/>
-                                </form>
-                        
-                                <label for="assignment-group">Assignment Group</label><br/>
-                                <select class = "form-control" id="assignment-group">
-                                    <option selected value="ASSIGNMENTS">ASSIGNMENTS</option>
-                                </select>
-                        
-                                <h2></h2>
-                        
-                                <label for="grade-format">Display Grade as</label><br/>
-                                <select class = "form-control" id="grade-format">
-                                    <option selected value="percentage">Percentage</option>
-                                </select>
-                        
-                                <h2></h2>
-                        
-                                <label for="submission-type">Submission Type</label><br/>
-                                <select class = "form-control" id="submission-type">
-                                    <option selected value="online">Online</option>
-                                </select>
-                        
-                                <h2></h2>
-                        
-                                <label>Online Entry Options</label>
-                                <br/>
-                                <input type="checkbox" value="TEXT-ENTRY"
-                                    name = "check-entry-options" id="chkbox-text"/>
-                                <label for="chkbox-text">Text Entry</label><br/>
-                        
-                                <input type="checkbox" value="URL-ENTRY"
-                                    name = "check-entry-options" id="chkbox-url"/>
-                                <label for="chkbox-url">Website URL</label><br/>
-                        
-                                <input type="checkbox" value="MEDIA-ENTRY"
-                                    name = "check-entry-options" id="chkbox-media"/>
-                                <label for="chkbox-media">Media Recordings</label><br/>
-                        
-                                <input type="checkbox" value="ANNOTATION-ENTRY"
-                                    name = "check-entry-options" id="chkbox-annotation"/>
-                                <label for="chkbox-annotation">Student Annotation</label><br/>
-                        
-                                <input type="checkbox" value="FILE-ENTRY"
-                                    name = "check-entry-options" id="chkbox-file"/>
-                                <label for="chkbox-file">File Uploads</label><br/>
-                        
-                                <h2></h2>
-                        
-                                <label>Assign</label>
-                                <br/>
-                                <label>Assign to</label>
-                                <form id="text-field-assign-to">
-                                    <input class = "form-control" id="text-field-assign-to" 
-                                    value="Everyone"/><br/>
-                                </form>
-                        
-                                <h2></h2>
-                        
-                                <label for="text-fields-due">Due</label><br/>
-                                <input class = "form-control" type="date" 
-                                    id="text-fields-due" 
-                                    value="2000-01-01"/><br/>
-                        
-                                <h2></h2>
-                                
-                                <label for="text-fields-available-from">Available from</label><br/>
-                                <input class = "form-control" type="date" 
-                                    id="text-fields-available-from" 
-                                    value="2021-01-01"/><br/>
-                        
-                                <h2></h2>
-                        
-                                <label for="text-fields-until">Until</label><br/>
-                                <input class = "form-control" type="date" 
-                                    id="text-fields-until" 
-                                    value="2021-01-01"/><br/>
-                        
-                                <h2></h2>
-                        
-                                <a href="../screen.html">
-                                    <button class="btn btn-danger" type="button cancel" id="button">Cancel</button>
-                                    <button class="btn btn-success" type="button Save" id="button">Save</button>
-                                </a>
-
-                         
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
         </body>
 </html>
