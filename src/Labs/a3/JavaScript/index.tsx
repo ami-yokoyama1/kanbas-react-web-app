@@ -1,4 +1,3 @@
-import Add from "../routing/Add";
 import AddingAndRemovingDataToFromArrays from "./arrays/AddingAndRemovingDataToFromArrays";
 import ArrayIndexAndLength from "./arrays/ArrayIndexAndLength";
 import FilterFunction from "./arrays/FilterFunction";
@@ -28,7 +27,6 @@ function JavaScript(){
     return(
         <div>
             <h3>JavaScript</h3>
-            {/* <Add /> */}
             <FunctionDestructing />
             <Destructing />
             <Spreading />
