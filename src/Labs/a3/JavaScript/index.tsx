@@ -10,9 +10,13 @@ import IfElse from "./conditionals/IfElse";
 import TernaryOperator from "./conditionals/TernaryOperator";
 import ArrowFunctions from "./functions/ArrowFunctions";
 import ES5Functions from "./functions/ES5Functions";
+import FunctionDestructing from "./functions/FunctionDestructing";
 import FunctionParenthesisAndParameters from "./functions/FunctionParenthesisAndParameters";
 import ImpliedReturn from "./functions/ImpliedReturn";
+import Destructing from "./json/Destructing";
+import House from "./json/House";
 import JsonStringify from "./json/JsonStringify";
+import Spreading from "./json/Spreading";
 import TemplateLiterals from "./string/TemplateLiterals";
 import BooleanVariables from "./variables/BooleanVariables";
 import VariableTypes from "./variables/VariableTypes";
@@ -23,6 +27,10 @@ function JavaScript(){
     return(
         <div>
             <h3>JavaScript</h3>
+            <FunctionDestructing />
+            <Destructing />
+            <Spreading />
+            <House />
             <TemplateLiterals />
             <FilterFunction />
             <FindIndex />

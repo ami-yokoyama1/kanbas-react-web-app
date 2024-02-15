@@ -1,4 +1,5 @@
 function TemplateLiterals(){
+    // use back ticks to embed literals. this is better
     const five = 2 + 3;
     const result1 = "2 + 3 = " + five;
     const result2 = `2 + 3 = ${2 + 3}`;
