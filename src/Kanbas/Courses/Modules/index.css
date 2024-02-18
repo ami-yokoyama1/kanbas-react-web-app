@@ -1,0 +1,113 @@
+.wd-modules,
+.wd-modules * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules {
+  margin: 5px;
+}
+
+.wd-modules > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-modules > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-modules > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-modules > li {
+  margin-bottom: 20px;
+}
+
+.wd-modules span.wd-list-under-weeks{
+  padding-left: 2em;
+}
+
+.wd-modules i.fa-link{
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: green;
+}
+
+.wd-modules a, i.fa-window-restore{
+  text-decoration: none;
+  color: red;
+}
+
+.buttons{
+  padding-left: 27em;
+}
+
+.buttons button.module{
+  background-color: red;
+  color: white;
+}
+
+.flex-grow-0{
+  margin-left: 2%;
+}
+
+.cs-options a{
+  display: block;
+  height: 50px;
+  width: 230px;
+  margin-right: 5 px;
+  background-color: #e6e6e6;
+  text-align: left;
+  line-height: 50px;
+  text-decoration: none;
+  border: 1px solid gray !important;
+  color: rgb(101, 101, 101);
+  padding-left: 10px;
+}
+
+.cs-button-2{
+  background-color: rgb(121, 193, 121);
+}
+
+.td a, .cu-le a, .cu-23le a{
+  color: red;
+  text-decoration: none;
+}
+
+.top-bar a i{
+  padding: 5px;
+}
+
+.top-bar a, .top-bar button, .collapse{
+  color: red;
+  text-decoration: none;
+}
+
+.top-bar button.course-navigation{
+  float: right;
+  color: black;
+}
+
+.top-bar button.student-view{
+  float: right;
+  color: black;
+  font-size: 16px;
+}
+
+.top-bar .cn{
+  float: right;
+  color: red;
+  text-decoration: none;
+}
+
+.top-bar .cn .fa-eye-slash{
+  color: black;
+}
