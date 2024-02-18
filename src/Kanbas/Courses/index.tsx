@@ -3,13 +3,18 @@ import { useParams, Routes, Route, Navigate } from "react-router-dom";
 import courses from "../Database/courses.json";
 import CourseNavigation from "./Navigation";
 import ModuleList from "./Modules/list";
+import { HiMiniBars3 } from "react-icons/hi2";
+import Home from "./Home";
+import Assignments from "./Assignments";
+import AssignmentEditor from "./Assignments/Editor";
+import Grades from "./Grades";
 
 function Courses(){
     const {cid} = useParams();
     const course = courses.find((course) => course._id === cid);
     return(
         <>
-            <h2>Courses {course?.name}</h2>
+            <h2><HiMiniBars3 /> Courses {course?.name}</h2>
             <CourseNavigation />
             <div>
                 <div
@@ -17,12 +22,12 @@ function Courses(){
                 style={{ left: "320px", top: "50px" }} >
                 <Routes>
                     <Route path="/" element={<Navigate to="Home" />} />
-                    <Route path="Home" element={<h1>Home</h1>} />
+                    <Route path="Home" element={<Home />} />
                     <Route path="Modules" element={<ModuleList />} />
                     <Route path="Piazza" element={<h1>Piazza</h1>} />
-                    <Route path="Assignments" element={<h1>Assignments</h1>} />
-                    <Route path="Assignments/:assignmentId" element={<h1>Assignment Editor</h1>} />
-                    <Route path="Grades" element={<h1>Grades</h1>} />
+                    <Route path="Assignments" element={<Assignments />} />
+                    <Route path="Assignments/:assignmentId" element={<AssignmentEditor />} />
+                    <Route path="Grades" element={<Grades />} />
                 </Routes>
                 </div>
             </div>
