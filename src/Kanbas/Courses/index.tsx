@@ -8,13 +8,14 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import "./index.css";
 
 function Courses(){
     const {cid} = useParams();
     const course = courses.find((course) => course._id === cid);
     return(
         <>
-            <h2><HiMiniBars3 /> Courses {course?.name}</h2>
+            <h2 className="burger"><HiMiniBars3 /> Course {course?.name}</h2>
             <CourseNavigation />
             <div>
                 <div

@@ -9,16 +9,15 @@ function ModuleList() {
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
     <>
-      {/* <!-- Add buttons here --> */}
       <div className="buttons">
-      <button type="button collapse-all">Collapse All</button>
-      <button type="button view-progress">View Progress</button>
-      <select id="button3">
-          <option selected value="PA">Publish All</option>
-      </select>
-      <button className="module">+ Module</button>
-      <button type="..."><i className="fa fa-ellipsis-v ms-2"></i></button>
-    </div>
+        <button className="button collapse-all">Collapse All</button>
+        <button className="button view-progress">View Progress</button>
+        <select id="button3">
+            <option selected value="PA">Publish All</option>
+        </select>
+        <button className="module">+ Module</button>
+        <button className="..."><FaEllipsisV className="ms-2"/></button>
+      </div>
       <ul className="list-group wd-modules">
         {modulesList.map((module) => (
           <li
