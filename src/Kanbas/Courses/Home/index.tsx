@@ -1,48 +1,54 @@
 import ModuleList from "../Modules/list";
-import { FaBan } from "react-icons/fa";
+import { FaBan, FaFileImport, FaBullseye, FaBullhorn, FaBell, FaCalendar } from "react-icons/fa";
+import { FaArrowRightFromBracket, FaChartSimple, FaPencil } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div>
       <h2>Home</h2>
+      <div className="d-flex">
+      <div className="flex-fill">
       <ModuleList />
-      <h2>Status</h2>
+      </div>
       <div className="flex-grow-0 me-2 d-none d-lg-block" style={{"width": "250px"}}>
               <h4>Course Status</h4>
                 <div className="cs-options">
-                  <a href="#"><i className="fa fa-file-import"></i> Import Existing Content</a>
-                  <a href="#"><i className="fa fa-solid fa-arrow-right-from-bracket"></i> Import from Commons</a>
-                  <a href="#"><i className="fa-solid fa-bullseye"></i> Choose Home Page</a>
-                  <a href="#"><i className="fa-solid fa-chart-simple"></i> View Course Stream</a>
-                  <a href="#"><i className="fa-solid fa-bullhorn"></i> New Announcement</a>
-                  <a href="#"><i className="fa-solid fa-chart-simple"></i> New Analytics</a>
-                  <a href="#"><i className="fa-regular fa-bell"></i> View Course Notifications</a>
+                  <Link to="#"><FaFileImport/> Import Existing Content</Link>
+                  <Link to="#"><FaArrowRightFromBracket/> Import from Commons</Link>
+                  <Link to="#"><FaBullseye/> Choose Home Page</Link>
+                  <Link to="#"><FaChartSimple/> View Course Stream</Link>
+                  <Link to="#"><FaBullhorn /> New Announcement</Link>
+                  <Link to="#"><FaChartSimple /> New Analytics</Link>
+                  <Link to="#"><FaBell /> View Course Notifications</Link>
                   <div className="clear"></div>
                 </div>
+                <h2></h2>
 
                 <h6>To Do</h6><hr />
                 <div className="td">
-                  <a href="#"><i className="fa-solid fa-1"></i>
-                  Grade A1 - ENV + HTML</a>
-                  {/* </br> */}
+                  <Link to="#"><FaPencil />
+                   Grade A1 - ENV + HTML</Link> <br />
                   100 points ・ Sep 19 at 11:59pm
                 </div>
-                {/* </br> */}
-
-                {/* // <h6>Coming Up</h6><hr />
-                // <div className="cu-le">
-                //   <a href="#"><i className="fa-regular fa-calendar"></i>
-                //   Lecture</a></br>
-                //   CS54550.12631.202410</br>
-                //   Sep 11 at 11:45am
-                // </div> */}
+                <br />
+                <h6>Coming Up</h6><hr />
+                <div className="cu-le">
+                  <Link to="#"><FaCalendar />Lecture</Link> <br />
+                  CS54550.12631.202410 <br />
+                  Sep 11 at 11:45am
+                </div>
                 <div className="cu-23le">
-                <a href="#"><i className="fa-regular fa-calendar"></i>
-                CS5610 06 SP23 Lecture</a>
-                CS54550.12631.202410
+                <Link to="#"><FaCalendar />
+                CS5610 06 SP23 Lecture</Link> <br />
+                CS54550.12631.202410 <br />
                 Sep 11 at 6pm
                 </div>
             </div>
+
+
+      </div>
+      
     </div>
   );
 }

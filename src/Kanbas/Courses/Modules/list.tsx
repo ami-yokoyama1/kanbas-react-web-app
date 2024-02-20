@@ -9,7 +9,8 @@ function ModuleList() {
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
   return (
     <>
-      <div className="buttons">
+    {/* <div className="d-none d-md-block"> */}
+    <div className="buttons">
         <button className="button collapse-all">Collapse All</button>
         <button className="button view-progress">View Progress</button>
         <select id="button3">
@@ -49,6 +50,12 @@ function ModuleList() {
           </li>
         ))}
       </ul>
+
+
+
+
+        {/* </div> */}
+      
     </>
   );
 }
