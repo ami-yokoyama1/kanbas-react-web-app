@@ -33,7 +33,7 @@ function ModuleList() {
       
     <ul className="list-group wd-modules">
     <li className="list-group-item">
-    <button
+        <button
           onClick={() => dispatch(addModule({ ...module, course: cid }))}>
           Add
         </button>
