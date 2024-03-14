@@ -9,14 +9,16 @@ function Assignments() {
   const [assignmentList, setAssignmentList] = useState<any[]>(assignments);
   const [assignment, setAssignment] = useState({
     _id: "0",
-    name: "New Assignment",
+    title: "New Assignment",
     course: cid || "",
   });
   const addAssignment = (assignment: any) => {
+    console.log("assignment",assignment)
     const newAssignment = { ...assignment,
       _id: new Date().getTime().toString() };
     const newAssignmentList = [newAssignment, ...assignmentList];
     setAssignmentList(newAssignmentList);
+    console.log("assignmentList",assignmentList,newAssignmentList)
   };
   const deleteAssignment = (assignmentId: string) => {
     const newAssignmentList = assignmentList.filter(
@@ -67,19 +69,23 @@ function Assignments() {
                 <button onClick={() => { addAssignment(assignment) }}>
                   Add
                 </button>
+
                 <button onClick={updateModule}>
                   Update
                 </button>
 
-                <input value={assignment.name}
+                <input value={assignment.title}
                   onChange={(e) => setAssignment({
-                    ...assignment, name: e.target.value })}
+                    ...assignment, title: e.target.value })}
                 />
               </li>
-
-              {assignmentList
+              
+              {
+                
+                assignmentList
                 .filter((assignment) => assignment.course === cid)
                 .map((assignment, index) => (
+                  
                 <li key={index} className="list-group-item">
                     <button
                       onClick={(event) => { setAssignment(assignment); }}>
@@ -96,6 +102,7 @@ function Assignments() {
                   <span className="float-end">
                     <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
                 </li>))}
+                
             </ul>
           </li>
         </ul>
