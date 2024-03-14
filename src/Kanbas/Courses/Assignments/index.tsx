@@ -1,12 +1,13 @@
-import React from "react";
+import React, {useState} from "react";
 import "./index.css";
 import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
+
 function Assignments() {
   const { cid } = useParams();
-  const assignmentList = assignments.filter(
-    (assignment) => assignment.course === cid);
+  const [assignmentList, setAssignmentList] = useState<any[]>(assignments);
+  
   return (
     <>
       {/* {<!-- Add buttons and other fields here -->} */}
@@ -20,7 +21,33 @@ function Assignments() {
                 <button className="..."><FaEllipsisV className="ms-2"/></button>
             </span>
         </div><hr />
+
+
         <ul className="list-group wd-modules">
+          <li className="list-group-item">
+            <div>
+              <FaEllipsisV className="me-2" /> ASSIGNMENTS
+              <span className="float-end">
+                <FaCheckCircle className="text-success" />
+                <FaPlusCircle className="ms-2" /><FaEllipsisV className="ms-2" />
+              </span>
+            </div>
+            <ul className="list-group">
+              {assignmentList
+                .filter((assignment) => assignment.course === cid)
+                .map((assignment, index) => (
+                <li key={index} className="list-group-item">
+                  <FaEllipsisV className="me-2" />
+                  <Link
+                    to={`/Kanbas/Courses/${cid}/Assignments/${assignment._id}`}>{assignment.title}</Link>
+                  <span className="float-end">
+                    <FaCheckCircle className="text-success" /><FaEllipsisV className="ms-2" /></span>
+                </li>))}
+            </ul>
+          </li>
+        </ul>
+
+        {/* <ul className="list-group wd-modules">
           <li className="list-group-item">
             <div>
               <FaEllipsisV className="me-2" /> ASSIGNMENTS
@@ -40,7 +67,7 @@ function Assignments() {
                 </li>))}
             </ul>
           </li>
-        </ul>
+        </ul> */}
 
 
       </div>

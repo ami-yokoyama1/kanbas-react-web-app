@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { modules } from "../../Database";
 import { useSelector, useDispatch } from "react-redux";
+import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import {
   addModule,
   deleteModule,
@@ -11,7 +12,7 @@ import {
 import { KanbasState } from "../../store";
 
 function ModuleList() {
-  const { courseId } = useParams();
+  const { cid } = useParams();
   const moduleList = useSelector((state: KanbasState) => 
   state.modulesReducer.modules);
   const module = useSelector((state: KanbasState) => 
@@ -20,10 +21,20 @@ function ModuleList() {
 
   return (
     <>
+    <div className="buttons">
+        <button className="button collapse-all">Collapse All</button>
+        <button className="button view-progress">View Progress</button>
+        <select id="button3">
+            <option selected value="PA">Publish All</option>
+        </select>
+        <button className="module">+ Module</button>
+        <button className="..."><FaEllipsisV className="ms-2"/></button>
+      </div>
+      
     <ul className="list-group wd-modules">
     <li className="list-group-item">
     <button
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}>
+          onClick={() => dispatch(addModule({ ...module, course: cid }))}>
           Add
         </button>
         <button
@@ -41,8 +52,9 @@ function ModuleList() {
             dispatch(setModule({ ...module, description: e.target.value }))
           }/>
       </li>
+
       {moduleList
-        .filter((module) => module.course === courseId)
+        .filter((module) => module.course === cid)
         .map((module, index) => (
           <li key={index} className="list-group-item">
             <button
