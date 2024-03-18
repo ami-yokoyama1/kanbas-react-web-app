@@ -4,39 +4,55 @@ import { FaCheckCircle, FaEllipsisV, FaPlusCircle } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 import { assignments } from "../../Database";
 
+
+import { useSelector, useDispatch } from "react-redux";
+import {
+  addAssignment,
+  deleteAssignment,
+  updateAssignment,
+  setAssignment,
+} from "./assignmentsReducer";
+import { KanbasState } from "../../store";
+
+
 function Assignments() {
   const { cid } = useParams();
-  const [assignmentList, setAssignmentList] = useState<any[]>(assignments);
-  const [assignment, setAssignment] = useState({
-    _id: "0",
-    title: "New Assignment",
-    course: cid || "",
-  });
-  const addAssignment = (assignment: any) => {
-    console.log("assignment",assignment)
-    const newAssignment = { ...assignment,
-      _id: new Date().getTime().toString() };
-    const newAssignmentList = [newAssignment, ...assignmentList];
-    setAssignmentList(newAssignmentList);
-    console.log("assignmentList",assignmentList,newAssignmentList)
-  };
-  const deleteAssignment = (assignmentId: string) => {
-    const newAssignmentList = assignmentList.filter(
-      (assignment) => assignment._id !== assignmentId );
-    setAssignmentList(newAssignmentList);
-  };
-  const updateModule = () => {
-    const newAssignmentList = assignmentList.map((m) => {
-      if (m._id === assignment._id) {
-        return assignment;
-      } else {
-        return m;
-      }
-    });
-    setAssignmentList(newAssignmentList);
-  };
+  // const [assignmentList, setAssignmentList] = useState<any[]>(assignments);
+  // const [assignment, setAssignment] = useState({
+  //   _id: "0",
+  //   title: "New Assignment",
+  //   course: cid || "",
+  // });
+  // const addAssignment = (assignment: any) => {
+  //   console.log("assignment",assignment)
+  //   const newAssignment = { ...assignment,
+  //     _id: new Date().getTime().toString() };
+  //   const newAssignmentList = [newAssignment, ...assignmentList];
+  //   setAssignmentList(newAssignmentList);
+  //   console.log("assignmentList",assignmentList,newAssignmentList)
+  // };
+  // const deleteAssignment = (assignmentId: string) => {
+  //   const newAssignmentList = assignmentList.filter(
+  //     (assignment) => assignment._id !== assignmentId );
+  //   setAssignmentList(newAssignmentList);
+  // };
+  // const updateModule = () => {
+  //   const newAssignmentList = assignmentList.map((m) => {
+  //     if (m._id === assignment._id) {
+  //       return assignment;
+  //     } else {
+  //       return m;
+  //     }
+  //   });
+  //   setAssignmentList(newAssignmentList);
+  // };
 
 
+  const assignmentList = useSelector((state: KanbasState) => 
+    state.assignmentsReducer.assignments);
+  const assignment = useSelector((state: KanbasState) => 
+    state.assignmentsReducer.assignment);
+  const dispatch = useDispatch();
 
   
   return (
@@ -66,17 +82,17 @@ function Assignments() {
             <ul className="list-group">
 
               <li className="list-group-item">
-                <button onClick={() => { addAssignment(assignment) }}>
+                <button onClick={() => dispatch(addAssignment({ ...assignment, course: cid }))}>
                   Add
                 </button>
 
-                <button onClick={updateModule}>
+                <button onClick={() => dispatch(updateAssignment(assignment))}>
                   Update
                 </button>
 
                 <input value={assignment.title}
-                  onChange={(e) => setAssignment({
-                    ...assignment, title: e.target.value })}
+                  onChange={(e) => dispatch(setAssignment({ ...assignment, title: e.target.value }))
+                }
                 />
               </li>
               
@@ -88,11 +104,11 @@ function Assignments() {
                   
                 <li key={index} className="list-group-item">
                     <button
-                      onClick={(event) => { setAssignment(assignment); }}>
+                      onClick={(event) => dispatch(setAssignment(assignment))}>
                       Edit
                     </button>
                     <button
-                      onClick={() => deleteAssignment(assignment._id)}>
+                      onClick={() => dispatch(deleteAssignment(assignment._id))}>
                       Delete
                     </button>
 
